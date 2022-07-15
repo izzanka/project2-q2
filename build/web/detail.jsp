@@ -64,9 +64,9 @@
               <span>• <%=  rs1.getString("category_name") %></span>
               <h1><i><%=  rs1.getString("name") %></i></h1>
             
-<!--              <p>
+              <p>
                 <%=  rs1.getString("description") %>
-              </p>-->
+              </p>
             </div>
             
         

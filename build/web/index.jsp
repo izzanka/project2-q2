@@ -51,18 +51,18 @@
                     </div>
 
                 <% } %>
-
             </div>
         </div>
-
+            
         <div class="bestselle">
             <div class="display">
-                <h1 id="displayNumber">Best Shoe</h1>
+                <h1 id="displayNumber">New Shoes</h1>
+                <a href="shoe">+ add new shoe</a>
             </div>
             <div class="flex-container-row">
                 <% 
-                    ShoeController sc = new ShoeController();
-                    ResultSet rs2 = sc.getAll();
+                    ShoeController sc1 = new ShoeController();
+                    ResultSet rs2 = sc1.getAll(true);
                 %>
                 
                 <% while(rs2.next()) { %>
@@ -76,6 +76,32 @@
                        <p><%=  rs2.getString("name") %></p>
                        <p>Rp<%= rs2.getInt("price") %></p>
                        <button><a href='<%= "detail?id=" + rs2.getInt("id") %>'>Detail</a></button>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+
+        <div class="bestselle">
+            <div class="display">
+                <h1 id="displayNumber">Best Shoes</h1>
+            </div>
+            <div class="flex-container-row">
+                <% 
+                    ShoeController sc2 = new ShoeController();
+                    ResultSet rs3 = sc2.getAll(false);
+                %>
+                
+                <% while(rs3.next()) { %>
+                    <%
+                        Gson gson = new Gson();
+                        String[] images = gson.fromJson(rs3.getString("images"), String[].class);
+                    %>
+
+                    <div class="button">
+                       <img id='ho'  src="<%= images[0] %>" alt="adidas12">
+                       <p><%=  rs3.getString("name") %></p>
+                       <p>Rp<%= rs3.getInt("price") %></p>
+                       <button><a href='<%= "detail?id=" + rs3.getInt("id") %>'>Detail</a></button>
                     </div>
                 <% } %>
                

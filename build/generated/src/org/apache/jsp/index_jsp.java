@@ -58,7 +58,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
       out.write("        <title>Home</title>\n");
-      out.write("        <link rel=\"stylesheet\" href=\"index.css\">\n");
+      out.write("        <link rel=\"stylesheet\" href=\"css/index.css\">\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
       out.write("        <header>\n");
@@ -113,6 +113,15 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                ");
  } 
       out.write("\n");
+      out.write("            </div>\n");
+      out.write("        </div>\n");
+      out.write("            \n");
+      out.write("        <div class=\"bestselle\">\n");
+      out.write("            <div class=\"display\">\n");
+      out.write("                <h1 id=\"displayNumber\">New Shoes</h1>\n");
+      out.write("                <a href=\"shoe\">+ add new shoe</a>\n");
+      out.write("            </div>\n");
+      out.write("            <div class=\"flex-container-row\">\n");
       out.write("\n");
       out.write("            </div>\n");
       out.write("        </div>\n");
